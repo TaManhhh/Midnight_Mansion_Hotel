@@ -1,0 +1,232 @@
+
+
+.booking-container {
+    
+    font-size: 100%;
+    background: url("https://aeros.vn/upload/images/aeros-phong-suite-la-gi-2.webp") no-repeat center top;
+
+    background-size: cover;
+
+    height: 1000px;
+}
+
+
+
+
+header nav {
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-booking-content: space-between;
+    align-items: center;
+}
+
+
+.row div {
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+}
+
+.main-nav li {
+    list-style: none;
+    display: inline-block;
+
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-size: 90%;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.main-nav li a:hover,
+a:active {
+    border-bottom: 5px solid #bf55ec;
+    padding-bottom: 6px;
+    transition: 0.4s;
+}
+
+.row .icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    padding-right: -60px;
+}
+
+@media (max-width: 1048px) {
+    .logo {
+        height: 50px;
+        padding-left: 60px;
+    }
+    .row div {
+        margin-right: 60px;
+    }
+    .main-nav li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 909px) {
+    .row .icon {
+        display: block;
+  
+    }
+    .main-nav {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 57px;
+        background-color: rgb(0, 0, 0, 0.2);
+        right: -110%;
+        text-align: center;
+        transition: all 0.8s;
+    }
+    .main-nav li {
+        display: block;
+        margin: 50px 0;
+        line-height: 10px;
+    }
+    .main-nav li a {
+        font-size: 18px;
+        color: #fff;
+    }
+    .main-nav li a:hover,
+    a:active {
+        border: none;
+        color: #bf55ec;
+    }
+    .main-nav.show {
+        right: 0;
+    }
+}
+
+
+
+.booking-container-h1 {
+    font-family: cinzel;
+    font-size: 54px;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: rgb(136, 23, 23);
+    word-spacing: 11px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.booking-item {
+
+    width: 80%;
+    background: rgba(0, 0, 0, 0.51);
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin: 10%;
+    height: 50%;
+}
+
+.booking-item .title {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(13, 12, 12);
+    text-transform: capitalize;
+    margin-bottom: 1em;
+
+    letter-spacing: 7px;
+
+}
+
+.booking-content {
+
+    display: inline-block;
+}
+
+.booking-content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+form .user-details .input-box {
+    border: 1px solid #fff;
+    margin: 10px;
+    margin-left: 8px;
+    padding: 5px;
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+    display: flex;
+}
+
+#input-group::placeholder {
+    color: #fff;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.icon {
+    display: inline-block;
+    color: #fff;
+    border-right: 1px solid #fff;
+    padding: 6px;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    width: 35px;
+}
+
+.book-now {
+    display: inline-block;
+}
+
+.user-details .input-box #input-group {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 8px;
+    color: #fff;
+}
+
+option {
+    background-color: #000;
+}
+
+
+
+
+form .button-booking {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+    margin-left: 10px;
+}
+
+form .button-booking button {
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    background: transparent;
+    color: #fff;
+    width: 150px;
+    border: 1px solid red;
+    outline: none;
+    padding: 8px;
+    font-size: 25px;
+    cursor: pointer;
+}

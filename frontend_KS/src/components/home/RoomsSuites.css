@@ -1,0 +1,85 @@
+.RoomsSuites {
+  padding: 100px 0;
+  background:#423a36 ;
+  color: white;
+}
+.slider-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-slider {
+  width: 85%;
+  height: 460px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.slideCards {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.slideCards::-webkit-scrollbar {
+  display: none;
+}
+.angle-right,
+.angle-left {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 100%;
+  position: absolute;
+  font-size: 35px;
+  width: 35px;
+  opacity: 0.2;
+}
+.angle-right {
+  right: 0;
+}
+.angle-left {
+  left: 0;
+}
+.angle-right:hover,
+.angle-left:hover {
+  opacity: 1;
+}
+.card {
+  width: 400px;
+  height: 440px;
+  background: white;
+  border-radius: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+/* .card :hover{
+  transform:scale(1.1);
+} */
+
+.card-img {
+  width: 100%;
+  height: 330px;
+  background: gray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-img-title,
+.card-img-description {
+  margin: 5px 0px 5px 10px;
+  color: black;
+}
+.card-img-title {
+  font-weight: 700;
+  margin-top: 10px;
+}
+.card-img-description {
+  opacity: 0, 5;
+  font-size: 16px;
+}

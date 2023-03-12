@@ -1,0 +1,31 @@
+.footer {
+  background-color: #423a36;
+  padding: 20px 60px 0;
+  margin-top:20px;
+}
+.footer-ul {
+  color: #bdbdbd;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.footer-li {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  width: 300px;
+}
+.footer-tl {
+  color: #e4a853;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 12px;
+}
+.line {
+  background-color: #edebe5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  content: "";
+  height: 1.5px;
+  width: 100%;
+}

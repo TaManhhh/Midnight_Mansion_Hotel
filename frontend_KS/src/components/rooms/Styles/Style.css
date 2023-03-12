@@ -1,0 +1,15 @@
+.row-style {
+    margin-left: 7%;
+   
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner-style {
+    margin: 25px;
+}
+
+.hover-card{
+    padding-top:30px;
+ 
+}
