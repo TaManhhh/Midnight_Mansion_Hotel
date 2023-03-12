@@ -3,7 +3,7 @@ import { InputForm, Button } from '../../form'
 import { useLocation, useNavigate } from 'react-router-dom'
 import * as actions from '../../../store/action'
 import { useDispatch, useSelector } from 'react-redux'
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const location = useLocation()
@@ -25,9 +25,9 @@ const Login = () => {
         isLoggedIn && navigate('/')
     }, [isLoggedIn])
 
-    // useEffect(() => {
-    //     msg && Swal.fire('Oops !', msg, 'error')
-    // }, [msg, update])
+    useEffect(() => {
+        msg && Swal.fire('Oops !', msg, 'error')
+    }, [msg, update])
 
     const handleSubmit = async () => {
         let finalPayload = isRegister ? payload : {

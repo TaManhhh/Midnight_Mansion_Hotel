@@ -1,11 +1,7 @@
 import React, { useState, useCallback } from "react";
 import "./header.css";
 import { NavLink } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import NavLinks from "./NavLinks";
-// import { LoginContext } from "../../context/AuthContext";
-// import { logout } from "../auth/firebase/firebase";
 import { Button } from "../form";
 import { path } from "../../ultils/constant";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +33,7 @@ function Header() {
             : "relative w-full h-20 px-28 py-4"
         }
       >
-        <div className="flex space-x-72 ">
+        <div className="flex justify-center items-center gap-60">
           <NavLink to="/">
             {" "}
             <img
