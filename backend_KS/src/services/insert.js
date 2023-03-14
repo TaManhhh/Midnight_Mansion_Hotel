@@ -1,29 +1,29 @@
 import db from '../models'
 import bcrypt from 'bcryptjs'
 import { v4 } from 'uuid'
-import chothuematbang from '../../data/chothuematbang.json'
-import chothuecanho from '../../data/chothuecanho.json'
-import nhachothue from '../../data/nhachothue.json'
-import chothuephongtro from '../../data/chothuephongtro.json'
+import room from '../../data/room.json'
+import home from '../../data/home.json'
+import contact from '../../data/contact.json'
+import aboutus from '../../data/aboutus.json'
 import generateCode from '../ultis/generateCode'
 import { dataPrice, dataArea } from '../ultis/data'
 import { getNumberFromString, getNumberFromStringV2 } from '../ultis/common'
 require('dotenv').config()
 const dataBody = [
     {
-        body: chothuephongtro.body,
+        body: aboutus.body,
         code: 'CTPT'
     },
     {
-        body: chothuematbang.body,
+        body: room.body,
         code: 'CTMB'
     },
     {
-        body: chothuecanho.body,
+        body: home.body,
         code: 'CTCH'
     },
     {
-        body: nhachothue.body,
+        body: contact.body,
         code: 'NCT'
     },
 ]

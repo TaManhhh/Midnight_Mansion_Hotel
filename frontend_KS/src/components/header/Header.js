@@ -7,7 +7,7 @@ import { path } from "../../ultils/constant";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from '../../store/action'
-function Header() {
+const Header =()=> {
   const navigate = useNavigate();
   const dispatch =useDispatch();
   const {isLoggedIn}= useSelector(state=>state.auth)
@@ -29,15 +29,14 @@ function Header() {
       <div
         className={
           navbar
-            ? "relative w-full h-20 py-4 px-28 bg-white "
-            : "relative w-full h-20 px-28 py-4"
+            ? " w-full h-20 py-4 px-28 bg-white "
+            : "w-full h-20 px-28 py-4"
         }
       >
-        <div className="flex justify-center items-center gap-60">
+        <div className=" flex justify-center items-center gap-56">
           <NavLink to="/">
-            {" "}
             <img
-              className="h-12"
+              className="h-12 "
               src="https://static.ybox.vn/2020/9/4/1600941241699-1594126270885-1577762085284-1571027713600-logo%20techkids%20moi%207%20(1)-05%20(1).png"
               alt=""
             />

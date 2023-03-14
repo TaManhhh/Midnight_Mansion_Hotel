@@ -6,26 +6,23 @@ import Bar from "../img/bar.jpg";
 import Spa from "../img/spa.jpg";
 import Avatar from "../img/hehe.jpg";
 import Profile from "../img/profile-2.jpg";
-// import { Contact } from "../Contact/Contact";
-
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faStar } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
 import Slide from "../header/Slide";
 import RoomsSuites from "./RoomsSuites";
-import Header from "../header/Header";
-// import Header from "../header/Header";
+
 function Home() {
   return (
-    <div className="home">
-      <Header />
+    <div className="w-full flex flex-col items-center ">
       <Slide />
       <div className="content">
         <NavLink className=" buttonn flex hover:bg-white " to="/Rooms">
           VIEW OUR ROOM <FontAwesomeIcon icon={faArrowRight} />{" "}
         </NavLink>
       </div>
+      <div className="w-4/5 ">
       <section className="welcome pd-100">
         <div className="container-welcome">
           <div className="grid grid-flow-col">
@@ -61,7 +58,9 @@ function Home() {
           </div>
         </div>
       </section>
-      <RoomsSuites />
+      </div>
+      <RoomsSuites/>
+      <div className="w-4/5">
       <div className="specials">
         <div className="container-special">
           <div className="section-title">
@@ -192,6 +191,7 @@ function Home() {
         </div>
       </div>
       <Outlet />
+      </div>
     </div>
   );
 }

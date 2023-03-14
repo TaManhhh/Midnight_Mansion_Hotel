@@ -50,7 +50,7 @@ function RoomsSuites(props) {
     slideCards.scrollLeft = slideCards.scrollLeft + 500;
   };
   return (
-    <div className="RoomsSuites">
+    <div className="RoomsSuites w-full">
       <div className="section-title">
         <div className="sub-title caret-white">DISCOVER</div>
         <div className=" title-name">Rooms vs Suites</div>

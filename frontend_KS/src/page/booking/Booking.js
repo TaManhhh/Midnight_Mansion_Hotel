@@ -5,14 +5,11 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import { FaHotel } from "react-icons/fa";
-import Header from "../../components/header/Header";
 import "./booking.css";
 
 function Booking() {
   return (
     <div className="booking-container">
-     <Header/>
-
       <div
         className="booking-container-h1"
         style={{

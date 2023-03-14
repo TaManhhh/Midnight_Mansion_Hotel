@@ -1,12 +1,11 @@
 import "./Contact.css";
 import ContactImg from "../img/Slide2.jpg";
-import Header from "../header/Header";
 export const Contact = () => {
   return (
       <div>
-        <Header/>
+        
         <div
-          className="content-rooms"
+          className="content-rooms "
         >
           <img src={ContactImg} alt=""/>
           <p className="text-rooms">Contact</p>

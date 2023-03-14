@@ -28,28 +28,14 @@ function App() {
   // }, [])
   return (
     <div className="App ">
-      {/* {login === true ? (
-        <header>
-          
-        </header>
-      ) : (
-        <></>
-      )}*/}
       <Header /> 
       <Routes>
       <Route path={path.HOME} element={<Home />}/>
-       
        <Route path={path.LOGIN} element={<Login />} />
-        <Route path="/The-Booking" element={<Booking />} />
-        <Route index path="/" element={<Home />} />
-        <Route path="/Rooms" exact element={<Room />} />
-        <Route path="/Contact" element={<Contact />} />
-        {/* <Route
-          path="/auth"
-          element={check === false ? <LoginScreen /> : <SignupScreen />}
-        /> */}
+        <Route path={path.ABOUT_US} element={<Booking />} />
+        <Route path={path.ROOM} exact element={<Room />} />
+        <Route path={path.CONTACT} element={<Contact />} />
       </Routes>
-
       <Footer />
     </div>
   );

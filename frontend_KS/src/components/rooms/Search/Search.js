@@ -1,65 +1,18 @@
-import SearchIcon from "@mui/icons-material/Search";
-import { useState } from "react";
-import "./Search.css";
-import CloseIcon from "@mui/icons-material/Close";
-
-export const Search = ({ placeholder, data }) => {
-  const [filteredData, setFilteredData] = useState([]);
-  const [wordEntered, setWordEntered] = useState("");
-
-  const handleFilter = (e) => {
-    const searchWord = e.target.value;
-    setWordEntered(searchWord);
-    const newFilter = data.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
-    });
-
-    if (searchWord === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newFilter);
-    }
-  };
-
-  const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
-
+import React from 'react'
+import SearchItem from '../../form/searchItem'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTag , faRestroom, faCrop, faSearch} from "@fortawesome/free-solid-svg-icons";
+const Search = () => {
   return (
-    <div className="search-title">
-      <div className="search">
-        <div className="searchInputs">
-          <strong>Tìm kiếm</strong>
-
-          <input
-            type="text"
-            placeholder={placeholder}
-            value={wordEntered}
-            onChange={handleFilter}
-          />
-          <div className="searchIcon">
-            {filteredData.length === 0 ? (
-              <SearchIcon />
-            ) : (
-              <CloseIcon id="clearBtn" onClick={clearInput} />
-            )}
-          </div>
-        </div>
-        {filteredData.length !== 0 && (
-          <div className="dataResult">
-            {filteredData.slice().map((value, key) => {
-              return (
-                <div>
-                  <a className="dataItem" href={`/Rooms/${value._id}`}>
-                    <p> {value.title}</p>
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
+    <div className='h-[70px] p-2 bg-amber-400 rounded-lg flex-col lg:flex-row flex items-center justify-around gap-2 '>
+      <SearchItem text={"Chọn giá "} IconAfter={<FontAwesomeIcon icon={faTag} />}/>
+      <SearchItem text={"Chọn diện tích"} IconAfter={<FontAwesomeIcon icon={faCrop} />}/>
+      <SearchItem text={"Loại phòng"}IconAfter={<FontAwesomeIcon icon={faRestroom} />}/>
+      <button type='button' className='outline-none py-2 px-4 w-full flex items-center justify-center gap-2 bg-amber-700 rounded-lg'>
+        Search <FontAwesomeIcon icon={faSearch} />
+      </button>
     </div>
-  );
-};
+  )
+}
+
+export default Search
