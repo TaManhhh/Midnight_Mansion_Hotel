@@ -1,31 +1,27 @@
 import db from '../models'
 import bcrypt from 'bcryptjs'
 import { v4 } from 'uuid'
-import room from '../../data/room.json'
-import home from '../../data/home.json'
-import contact from '../../data/contact.json'
-import aboutus from '../../data/aboutus.json'
+import Luxury from '../../data/Luxury.json'
+import double from '../../data/doubel.json'
+import Vip from '../../data/Vip.json'
 import generateCode from '../ultis/generateCode'
 import { dataPrice, dataArea } from '../ultis/data'
 import { getNumberFromString, getNumberFromStringV2 } from '../ultis/common'
 require('dotenv').config()
 const dataBody = [
     {
-        body: aboutus.body,
+        body: Vip.body,
         code: 'CTPT'
     },
     {
-        body: room.body,
+        body: double.body,
         code: 'CTMB'
     },
     {
-        body: home.body,
+        body: Luxury.body,
         code: 'CTCH'
     },
-    {
-        body: contact.body,
-        code: 'NCT'
-    },
+   
 ]
 
 
@@ -84,16 +80,16 @@ export const insertService = () => new Promise(async (resolve, reject) => {
                     id: imagesId,
                     image: JSON.stringify(item?.images)
                 })
-                await db.Overview.create({
-                    id: overviewId,
-                    code: item?.overview?.content.find(i => i.name === "Mã tin:")?.content,
-                    area: item?.overview?.content.find(i => i.name === "Khu vực")?.content,
-                    type: item?.overview?.content.find(i => i.name === "Loại tin rao:")?.content,
-                    target: item?.overview?.content.find(i => i.name === "Đối tượng thuê:")?.content,
-                    bonus: item?.overview?.content.find(i => i.name === "Gói tin:")?.content,
-                    created: item?.overview?.content.find(i => i.name === "Ngày đăng:")?.content,
-                    expired: item?.overview?.content.find(i => i.name === "Ngày hết hạn:",)?.content,
-                })
+                // await db.Overview.create({
+                //     id: overviewId,
+                //     code: item?.overview?.content.find(i => i.name === "Mã tin:")?.content,
+                //     area: item?.overview?.content.find(i => i.name === "Khu vực")?.content,
+                //     type: item?.overview?.content.find(i => i.name === "Loại tin rao:")?.content,
+                //     target: item?.overview?.content.find(i => i.name === "Đối tượng thuê:")?.content,
+                //     bonus: item?.overview?.content.find(i => i.name === "Gói tin:")?.content,
+                //     created: item?.overview?.content.find(i => i.name === "Ngày đăng:")?.content,
+                //     expired: item?.overview?.content.find(i => i.name === "Ngày hết hạn:",)?.content,
+                // })
                 await db.User.create({
                     id: userId,
                     name: item?.contact?.content.find(i => i.name === "Liên hệ:")?.content,

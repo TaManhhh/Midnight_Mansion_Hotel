@@ -1,4 +1,3 @@
-INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("CTCH", "HOME","A perfect holiday destination", "The finest hotel near Rockefeller Center", current_timestamp, current_timestamp);
-INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("CTMB", "ROOM","Room", "Room", current_timestamp, current_timestamp);
-INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("CTPT","ABOUT US", "ABOUT US", " ABOUT US", current_timestamp, current_timestamp);
-INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("NCT", "CONTACT","Contact", "Contact", current_timestamp, current_timestamp);
+INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("CTCH", "Doubel-Room","Doubel-Room","Doubel-Room", current_timestamp, current_timestamp);
+INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("CTMB", "Luxury","Luxury", "Luxury", current_timestamp, current_timestamp);
+INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("CTPT","Vip", "Vip", " Vip", current_timestamp, current_timestamp);

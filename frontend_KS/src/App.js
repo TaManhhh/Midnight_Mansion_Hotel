@@ -11,6 +11,7 @@ import {  useEffect } from "react";
 import * as actions from './store/action'
 import { path } from "./ultils/constant";
 import { useDispatch, useSelector } from "react-redux";
+import Detail from "./components/rooms/Detail";
 
 function App() {
   // const dispatch = useDispatch()
@@ -31,10 +32,12 @@ function App() {
       <Header /> 
       <Routes>
       <Route path={path.HOME} element={<Home />}/>
+      <Route path={path.HOME_PAGE} element={<Home />}/>
        <Route path={path.LOGIN} element={<Login />} />
         <Route path={path.ABOUT_US} element={<Booking />} />
         <Route path={path.ROOM} exact element={<Room />} />
         <Route path={path.CONTACT} element={<Contact />} />
+        <Route path={path.DETAL_POST__TITLE__POSTID} element={<Detail/>}/>
       </Routes>
       <Footer />
     </div>

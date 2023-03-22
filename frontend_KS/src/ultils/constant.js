@@ -1,10 +1,11 @@
 export const path = {
     HOME: '/*',
+    HOME_PAGE:':home',
     LOGIN: 'login',
     ABOUT_US: 'about_us',
     ROOM: 'room',
     CONTACT: 'contact',
-    DETAL_POST__TITLE__POSTID: 'chi-tiet/:title/:postId',
+    DETAL_POST__TITLE__POSTID: 'room/detail/:address/:postId',
     SEARCH: 'tim-kiem',
     SYSTEM: '/he-thong/*',
 }

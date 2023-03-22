@@ -15,7 +15,7 @@ const activeClass = (params) => {
 
 const NavLinks = () => {
   return (
-      <div className=" flex items-center justify-center gap-14  ">
+      <div className=" flex items-center justify-center gap-14 mt-4 ">
         {nav?.length > 0 && nav.map((item,index)=>{
           return(
             <div key={index}>
